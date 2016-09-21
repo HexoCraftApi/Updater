@@ -1,19 +1,7 @@
-## IntelliJ : https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
-## Maven : https://github.com/github/gitignore/blob/master/Maven.gitignore
 
-# User-specific stuff:
-.idea/artifacts
-.idea/copyright
-.idea/dictionaries
-.idea/libraries
-.idea/workspace.xml
-.idea/vcs.xml
+### IntelliJ ###
+.idea/
+*.iml
 
-# Sensitive or high-churn files:
-.idea/uiDesigner.xml
-
-# Maven:
+### Maven ###
 target/
-dependency-reduced-pom.xml
-
-## Plugin-specific files:

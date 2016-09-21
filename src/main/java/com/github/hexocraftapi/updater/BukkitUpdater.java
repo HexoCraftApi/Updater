@@ -47,17 +47,17 @@ public class BukkitUpdater extends Updater
 
 
 
-	public BukkitUpdater(JavaPlugin plugin, String projectId) throws Exception
+	public BukkitUpdater(JavaPlugin plugin, String projectId)
 	{
 		this(plugin, null, projectId, false);
 	}
 
-	public BukkitUpdater(JavaPlugin plugin, String apiKey, String projectId) throws Exception
+	public BukkitUpdater(JavaPlugin plugin, String apiKey, String projectId)
 	{
 		this(plugin, apiKey, projectId, false);
 	}
 
-	public BukkitUpdater(JavaPlugin plugin, String apiKey, String projectId, boolean verbose) throws Exception
+	public BukkitUpdater(JavaPlugin plugin, String apiKey, String projectId, boolean verbose)
 	{
 		super(plugin, verbose);
 
@@ -71,13 +71,11 @@ public class BukkitUpdater extends Updater
 		catch(NumberFormatException ex)
 		{
 			log(Level.SEVERE, "Unable to parse semver string!");
-			throw new Exception("Unable to parse semver string!");
 		}
 		catch(MalformedURLException ex)
 		{
 			log(Level.SEVERE, "Invalid URL, return failed response.");
 			result = Response.FAILED;
-			throw new Exception(ex.getMessage());
 		}
 
 		if (this.result != Response.FAILED) {

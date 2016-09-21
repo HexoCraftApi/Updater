@@ -43,12 +43,12 @@ public class GitHubUpdater extends Updater
 	protected URL queryUrl;
 
 
-	public GitHubUpdater(JavaPlugin plugin, String repository) throws Exception
+	public GitHubUpdater(JavaPlugin plugin, String repository)
 	{
 		this(plugin, repository, false);
 	}
 
-	public GitHubUpdater(JavaPlugin plugin, String repository, boolean verbose) throws Exception
+	public GitHubUpdater(JavaPlugin plugin, String repository, boolean verbose)
 	{
 		super(plugin, verbose);
 
@@ -62,13 +62,11 @@ public class GitHubUpdater extends Updater
 		{
 			log(Level.SEVERE, "Unable to parse semver string!");
 			result = Response.FAILED;
-			throw new Exception("Unable to parse semver string!");
 		}
 		catch(MalformedURLException ex)
 		{
 			log(Level.SEVERE, "Invalid URL, return failed response.");
 			result = Response.FAILED;
-			throw new Exception(ex.getMessage());
 		}
 
 		if (this.result != Response.FAILED) {

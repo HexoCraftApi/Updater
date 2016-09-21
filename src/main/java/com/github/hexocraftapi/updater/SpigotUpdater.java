@@ -47,15 +47,14 @@ public class SpigotUpdater extends Updater
 
 
 
-	public SpigotUpdater(JavaPlugin plugin, String resourceId) throws Exception
+	public SpigotUpdater(JavaPlugin plugin, String resourceId)
 	{
 		this(plugin, resourceId, false);
 	}
 
-	public SpigotUpdater(JavaPlugin plugin, String resourceId, boolean verbose) throws Exception
+	public SpigotUpdater(JavaPlugin plugin, String resourceId, boolean verbose)
 	{
 		super(plugin, verbose);
-
 
 		try
 		{
@@ -68,13 +67,11 @@ public class SpigotUpdater extends Updater
 		catch(NumberFormatException ex)
 		{
 			log(Level.SEVERE, "Unable to parse semver string!");
-			throw new Exception("Unable to parse semver string!");
 		}
 		catch(MalformedURLException ex)
 		{
 			log(Level.SEVERE, "Invalid URL, return failed response.");
 			result = Response.FAILED;
-			throw new Exception(ex.getMessage());
 		}
 
 		if (this.result != Response.FAILED) {

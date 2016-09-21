@@ -47,6 +47,7 @@ public class WebUtils
 
 	public static URLConnection initConnection(URL url) throws IOException
 	{
+		Proxy proxy = getProxy();
 		final URLConnection connection = (proxy != null ? url.openConnection(proxy) : url.openConnection());
 		connection.setConnectTimeout(2000);
 		connection.setReadTimeout(2500);

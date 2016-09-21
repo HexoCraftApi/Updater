@@ -1,10 +1,7 @@
 package com.github.hexocraftapi.updater.updater;
 
-import com.github.hexocraftapi.updater.updater.utils.FilenameUtils;
-import com.github.hexocraftapi.updater.updater.utils.ReflectionUtils;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.File;
 import java.net.URL;
 
 /**

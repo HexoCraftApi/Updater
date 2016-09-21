@@ -2,20 +2,16 @@ package com.github.hexocraftapi.updater.updater;
 
 import org.apache.commons.lang.Validate;
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.net.Proxy;
 import java.net.URL;
-import java.net.URLConnection;
-import java.util.Enumeration;
 import java.util.logging.Level;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
 
 import static com.github.hexocraftapi.updater.updater.utils.LoggerUtils.log;
-import static com.github.hexocraftapi.updater.updater.utils.WebUtils.getProxy;
 import static com.github.hexocraftapi.updater.updater.utils.WebUtils.initConnection;
-import static com.sun.org.apache.xerces.internal.xinclude.XIncludeHandler.BUFFER_SIZE;
 
 /**
  * @author <b>hexosse</b> (<a href="https://github.comp/hexosse">hexosse on GitHub</a>))

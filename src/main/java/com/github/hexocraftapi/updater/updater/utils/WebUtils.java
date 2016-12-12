@@ -52,8 +52,7 @@ public class WebUtils
 			ProxySelector def = ProxySelector.getDefault();
 			proxyList = def.select(new URI("http://foo/bar"));
 		}
-		catch(Exception e) {
-			e.printStackTrace();
+		catch(Exception ignored) {
 		}
 
 		if(proxyList != null) {

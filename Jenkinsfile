@@ -12,5 +12,15 @@ pipeline {
         echo 'This is the init stage'
       }
     }
+    stage('Build') {
+      steps {
+        sh 'mvn clean install'
+      }
+    }
+    stage('Archive') {
+      steps {
+        archiveArtifacts 'target/*.jar'
+      }
+    }
   }
 }
